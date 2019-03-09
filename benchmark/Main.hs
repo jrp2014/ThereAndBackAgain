@@ -18,6 +18,7 @@ main :: IO ()
 main =
   defaultMain
     [ bench "convolutionT" (nf (convolutionT xs) ys)
+    , bench "convolveTABA" (nf (convolveTABA xs) ys)
     , bench "convolutionC" (nf (convolutionC xs) ys)
     , bench "convolutionD" (nf (convolutionD xs) ys)
     , bench "cnv1" (nf cnv1 (xs, ys))
